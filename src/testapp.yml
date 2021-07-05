@@ -16,6 +16,7 @@ spec:
       containers:
       - image: atlastestapp
         name: testapp
+        imagePullPolicy: Never
         ports:
         - containerPort: 5000
 ---
