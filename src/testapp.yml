@@ -30,17 +30,17 @@ spec:
     targetPort: 5000
   selector:
     app: testapp
----
-apiVersion: batch/v1
-kind: Job
-metadata:
-  name: piii
-spec:
-  template:
-    spec:
-      containers:
-      - name: piii
-        image: perl
-        command: ["perl",  "-Mbignum=bpi", "-wle", "print bpi(2000)"]
-      restartPolicy: Never
-  backoffLimit: 4
+# ---
+# apiVersion: batch/v1
+# kind: Job
+# metadata:
+#   name: piii
+# spec:
+#   template:
+#     spec:
+#       containers:
+#       - name: piii
+#         image: perl
+#         command: ["perl",  "-Mbignum=bpi", "-wle", "print bpi(2000)"]
+#       restartPolicy: Never
+#   backoffLimit: 4
